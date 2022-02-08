@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: app-web
+  name: app-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-web
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: app-web
+    spec:
+      containers:
+      - image: docker.io/wordpress
+        name: wordpress
+        resources: {}
+status: {}
