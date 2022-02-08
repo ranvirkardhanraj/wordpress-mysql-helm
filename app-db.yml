@@ -20,5 +20,10 @@ spec:
       containers:
       - image: docker.io/mysql:5.7
         name: mysql
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: redhat
+        - name: MYSQL_DATABASE
+          value: wordpress
         resources: {}
 status: {}
