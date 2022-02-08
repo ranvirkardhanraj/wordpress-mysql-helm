@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2022-02-08T16:17:10Z"
+  labels:
+    app: app-db
+  name: app-db
+  namespace: default
+  resourceVersion: "1269"
+  selfLink: /api/v1/namespaces/default/services/app-db
+  uid: a1456639-f9a1-45f0-b5ed-9925d5a2f119
+spec:
+  clusterIP: 10.105.205.49
+  ports:
+  - port: 3306
+    protocol: TCP
+    targetPort: 3306
+  selector:
+    app: app-db
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
